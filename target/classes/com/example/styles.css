@@ -1,0 +1,260 @@
+/* Root and base settings */
+.root {
+    -fx-background-color: #fafafa;
+    -fx-font-family: 'Poppins', 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+    -fx-alignment: center;
+}
+
+/* Dark Theme */
+.dark-theme {
+    -fx-background-color: #121212;
+    -fx-text-fill: #e0e0e0;
+}
+
+/* HEADER */
+.header {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+}
+
+.header-label {
+    -fx-text-fill: #222;
+    -fx-font-size: 20px;
+    -fx-font-weight: 600;
+}
+
+.dark-theme .header-label {
+    -fx-text-fill: #f1f1f1;
+}
+
+/* BUTTONS */
+.search-button,
+.menu-button,
+.watch-later-nav-button,
+.theme-toggle-button,
+.details-button,
+.watch-later-button,
+.back-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 6;
+    -fx-text-fill: #222;
+    -fx-padding: 8 14;
+    -fx-cursor: hand;
+}
+
+.search-button:hover,
+.menu-button:hover,
+.watch-later-nav-button:hover,
+.theme-toggle-button:hover,
+.details-button:hover,
+.watch-later-button:hover,
+.back-button:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.dark-theme .search-button,
+.dark-theme .menu-button,
+.dark-theme .watch-later-nav-button,
+.dark-theme .theme-toggle-button,
+.dark-theme .details-button,
+.dark-theme .watch-later-button,
+.dark-theme .back-button {
+    -fx-border-color: #444;
+    -fx-text-fill: #e0e0e0;
+}
+
+.dark-theme .search-button:hover,
+.dark-theme .menu-button:hover,
+.dark-theme .watch-later-nav-button:hover,
+.dark-theme .theme-toggle-button:hover,
+.dark-theme .details-button:hover,
+.dark-theme .watch-later-button:hover,
+.dark-theme .back-button:hover {
+    -fx-background-color: #2a2a2a;
+}
+
+/* CONTAINERS */
+.content-container,
+.movie-section,
+.details-content,
+.poster-section,
+.details-info {
+    -fx-background-color: transparent;
+    -fx-padding: 16;
+    -fx-spacing: 12;
+    -fx-alignment: center;
+}
+
+.dark-theme .main-scroll-pane {
+    -fx-background-color: #121212;
+}
+
+.dark-theme .content-container,
+.dark-theme .movie-section,
+.dark-theme .details-content,
+.dark-theme .poster-section,
+.dark-theme .details-info {
+    -fx-background-color: #121212;
+}
+
+
+/* SECTION TITLES */
+.section-title,
+.section-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #222;
+}
+
+.dark-theme .section-title,
+.dark-theme .section-label {
+    -fx-text-fill: #f0f0f0;
+}
+
+/* MOVIE CARDS */
+.movie-card {
+    -fx-background-color: #fff;
+    -fx-border-radius: 10;
+    -fx-padding: 12;
+    -fx-spacing: 6;
+    -fx-cursor: hand;
+}
+
+.movie-card:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+.dark-theme .movie-card {
+    -fx-background-color: #1e1e1e;
+}
+
+.movie-title,
+.movie-title-large {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222;
+}
+
+.movie-year,
+.movie-votes,
+.movie-rating,
+.overview-text,
+.info-label {
+    -fx-text-fill: #666;
+    -fx-font-size: 12px;
+}
+
+
+.dark-theme .movie-title,
+.dark-theme .movie-title-large {
+    -fx-text-fill: #ffffff;
+}
+
+.dark-theme .movie-year,
+.dark-theme .movie-votes,
+.dark-theme .movie-rating,
+.dark-theme .overview-text,
+.dark-theme .info-label {
+    -fx-text-fill: #aaaaaa;
+}
+
+/* GENRE TAGS */
+.genre-tag {
+    -fx-background-color: #eeeeee;
+    -fx-text-fill: #555;
+    -fx-padding: 3 8;
+    -fx-font-size: 11px;
+    -fx-background-radius: 12;
+}
+
+.genre-tag:hover {
+    -fx-background-color: #d0d0d0;
+}
+
+.dark-theme .genre-tag {
+    -fx-background-color: #333;
+    -fx-text-fill: #ccc;
+}
+
+.dark-theme .genre-tag:hover {
+    -fx-background-color: #444;
+}
+
+/* FORM ELEMENTS */
+.text-field {
+    -fx-background-color: #fff;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 6;
+    -fx-padding: 6 10;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused {
+    -fx-border-color: #3498db;
+}
+
+.dark-theme .text-field {
+    -fx-background-color: #1e1e1e;
+    -fx-border-color: #444;
+    -fx-text-fill: #eee;
+}
+
+.choice-box {
+    -fx-background-color: #fff;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 6;
+    -fx-padding: 4 8;
+    -fx-font-size: 14px;
+}
+
+.choice-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #222;
+}
+
+.choice-box .list-cell:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.choice-box .list-cell:selected {
+    -fx-background-color: #d0d0d0;
+}
+
+.dark-theme .choice-box {
+    -fx-background-color: #1e1e1e;
+    -fx-border-color: #444;
+}
+
+.dark-theme .choice-box .list-cell {
+    -fx-text-fill: #eee;
+}
+
+.dark-theme .choice-box .list-cell:hover {
+    -fx-background-color: #2a2a2a;
+}
+
+.dark-theme .choice-box .list-cell:selected {
+    -fx-background-color: #333;
+}
+
+.details-year,
+.details-rating,
+.details-votes,
+.details-release,
+.details-title {
+    -fx-text-fill: #666666;
+}
+
+.dark-theme .details-year,
+.dark-theme .details-rating,
+.dark-theme .details-votes,
+.dark-theme .details-release,
+.dark-theme .details-title {
+    -fx-text-fill: #eeeeee;
+}
+
+.dark-theme .overview-text .content {
+    -fx-background-color: #333333;
+}

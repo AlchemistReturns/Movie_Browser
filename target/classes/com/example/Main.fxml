@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.MainController"
+            stylesheets="@styles.css">
+
+    <top>
+        <HBox styleClass="header" alignment="CENTER" BorderPane.alignment="CENTER" spacing="10.0">
+            <children>
+                <TextField fx:id="searchTextField" prefHeight="36.0" prefWidth="262.0" promptText="Enter movie title..." />
+                <Button fx:id="searchButton" text="Search" styleClass="search-button" prefHeight="30.0" prefWidth="90.0" />
+                <ChoiceBox fx:id="genreChoiceBox" prefHeight="28.0" prefWidth="215.0" />
+                <MenuButton fx:id="menuButton" text="Filter by Category" styleClass="menu-button" textFill="WHITE" prefHeight="38.0" prefWidth="210.0">
+                    <items>
+                        <MenuItem text="Popular Movies" />
+                        <MenuItem text="Now Showing" />
+                        <MenuItem text="Top Rated" />
+                        <MenuItem text="Upcoming" />
+                        <MenuItem text="All Movies" />
+                        <MenuItem text="Refresh All" />
+                    </items>
+                </MenuButton>
+                <Button fx:id="watchLaterButton" text="Watch Later" styleClass="watch-later-nav-button" prefHeight="38.0" prefWidth="150.0" />
+                <Button fx:id="themeToggleButton" text="🌙" styleClass="theme-toggle-button" prefHeight="38.0" prefWidth="117.0" />
+            </children>
+            <padding>
+                <Insets top="15.0" right="20.0" bottom="15.0" left="20.0" />
+            </padding>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="main-scroll-pane">
+            <content>
+                <!-- StackPane to center the VBox inside the ScrollPane -->
+                <StackPane alignment="TOP_CENTER">
+                    <VBox styleClass="content-container" spacing="20.0" alignment="CENTER">
+                        <children>
+                            <VBox styleClass="movie-section" spacing="10.0" alignment="CENTER">
+                                <children>
+                                    <Label fx:id="sectionTitleLabel" text="Popular Movies" styleClass="section-title" />
+                                    <FlowPane fx:id="moviesContainer" hgap="15.0" vgap="15.0" alignment="CENTER" />
+                                </children>
+                            </VBox>
+                        </children>
+                        <padding>
+                            <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+                        </padding>
+                    </VBox>
+                </StackPane>
+            </content>
+        </ScrollPane>
+    </center>
+
+</BorderPane>
+
