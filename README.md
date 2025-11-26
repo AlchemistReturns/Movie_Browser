@@ -1,147 +1,93 @@
-# Movie Database Application
+# Movie Browser (JavaFX + TMDB API)
 
-A JavaFX-based movie database application that fetches movie information from The Movie Database (TMDB) API and displays it in a modern card-based interface.
+This project is a JavaFX-based movie browsing application that fetches real-time movie data from the **TMDB API** and presents it through a clean, modern, and responsive graphical interface.  
+It reflects my understanding of **GUI design principles**, **modern UI patterns**, and effective **API integration** within desktop applications.
 
-## Features
+---
 
-- **Multiple Movie Categories**: Popular, Now Showing, Top Rated, and Upcoming movies
-- **Search Functionality**: Search movies by title
-- **Genre Filtering**: Filter movies by genre
-- **Modern UI**: Card-based layout with hover effects
-- **Responsive Design**: Horizontal scrolling for movie sections
-- **Real-time Data**: Fetches live data from TMDB API
+## Project Overview
 
-## Setup Instructions
+The goal of this application was to build a visually appealing and intuitive movie browsing experience.  
+The interface is designed using JavaFX layouts, CSS styling, and card-based components to create a clean and modern desktop UI.  
+The application communicates with the TMDB REST API to retrieve up-to-date information on movies, categories, and genres.
 
-### 1. Get TMDB API Key
+This project demonstrates:
+- Practical experience with GUI design best practices  
+- Clean separation of UI, logic, and networking layers  
+- Handling and rendering of dynamic API data  
+- Responsive and interactive desktop UI development  
 
-1. Visit [The Movie Database](https://www.themoviedb.org/settings/api)
-2. Create an account or log in
-3. Request an API key (choose "Developer" option)
-4. Copy your API key
+---
 
-### 2. Configure API Key
+## Key Features
 
-1. Open `src/api/movieApi.java`
-2. Replace `YOUR_API_KEY_HERE` on line 19 with your actual API key:
-   ```java
-   private static final String API_KEY = "your_actual_api_key_here";
-   ```
+### Multiple Movie Categories
+Displays real-time lists for:
+- Popular  
+- Now Showing  
+- Top Rated  
+- Upcoming  
 
-### 3. Run the Application
+Each category uses a horizontal scrollable layout for smooth browsing.
 
-1. Make sure you have Java 11+ and JavaFX installed
-2. Compile and run the application:
-   ```bash
-   javac -cp "path/to/javafx-sdk/lib/*" src/*.java src/*/*.java
-   java -cp "path/to/javafx-sdk/lib/*:src" Main
-   ```
+### Search Functionality
+Searches TMDB for movies by title and updates the UI with live results.
 
-## Project Structure
+### Genre Filtering
+Retrieves genres from TMDB and allows filtering of displayed movies.
 
-```
-src/
-├── Main.java                 # Main application entry point
-├── Main.fxml                # Main UI layout
-├── MainController.java       # Main controller logic
-├── MovieCard.fxml           # Individual movie card layout
-├── MovieCardController.java  # Movie card controller
-├── styles.css               # Application styling
-├── api/
-│   └── movieApi.java        # TMDB API integration
-└── model/
-    └── movieModel.java      # Movie data model
-```
+### Modern, Card-Based UI
+- Each movie is presented using styled card components.  
+- Hover effects, shadows, and smooth transitions create a visually modern experience.  
+- Designed with reusable UI components for scalability.
+
+### Responsive Layout
+- Works across different window sizes.  
+- Horizontal scrolling and adaptive card resizing ensure usability on various displays.
+
+### Real-Time API Integration
+- All movie, genre, and search data is fetched live from the TMDB API.  
+- Demonstrates use of HTTP requests, JSON parsing, and asynchronous data handling.
+
+---
+
+## GUI & Design Principles Demonstrated
+
+### Separation of Concerns
+The application separates UI components, data models, and API services, ensuring maintainability and clarity in the codebase.
+
+### Reusable Components
+Movie cards, sections, and layout containers are designed as reusable elements, showing an understanding of scalable GUI development.
+
+### Modern Styling Using JavaFX CSS
+- Clean typography  
+- Consistent spacing and alignment  
+- Hover animations and shadows  
+- Layouts that emphasize readability and user engagement  
+
+### User-Centered Interaction
+- Smooth scrolling  
+- Clear visual hierarchy  
+- Minimalistic design with emphasis on movie posters and titles  
+
+---
 
 ## API Integration
 
-The application uses The Movie Database (TMDB) API to fetch:
-- Popular movies
-- Now playing movies
-- Top rated movies
-- Upcoming movies
+### TMDB API Usage
+- Fetches movie lists, genres, and search results using TMDB endpoints.  
+- Demonstrates handling of API keys, query parameters, asynchronous tasks, and error handling.
 
-Each category displays up to 10 movies with:
-- Movie poster
-- Title
-- Release year
-- Genre tags
-- Rating and vote count
+### JSON Parsing and Data Mapping
+- TMDB API responses are mapped into Java model classes.  
+- Ensures a clean flow from raw API data to UI rendering.
 
-## Features in Detail
+---
 
-### Search
-- Type in the search box to find movies by title
-- Press Enter or click Search button
-- Results are displayed across all sections
+## Tech Stack
 
-### Genre Filtering
-- Use the genre dropdown to filter movies
-- Select "All Genres" to show all movies
-- Filter applies to all sections
-
-### Movie Cards
-- Hover effects with scaling animation
-- Displays movie poster, title, year, genres, and rating
-- Responsive design with proper spacing
-
-### Sections
-- **Popular Movies**: Currently popular movies
-- **Now Showing**: Movies currently in theaters
-- **Top Rated**: Highest rated movies
-- **Upcoming**: Movies releasing soon
-
-## Styling
-
-The application uses a modern, clean design with:
-- Card-based layout
-- Drop shadows and hover effects
-- Consistent color scheme
-- Responsive typography
-- Smooth animations
-
-## Troubleshooting
-
-### Network Connection Issues
-If you see `java.net.ConnectException` errors:
-- **The application will automatically use sample data** when the API is unreachable
-- Check your internet connection
-- Verify firewall settings aren't blocking the application
-- The app will show an information dialog when using fallback data
-- You can still test all features with the sample data
-
-### API Issues
-- Ensure your API key is correctly set in `src/api/movieApi.java`
-- Check internet connection
-- Verify TMDB API is accessible
-- If API is down, the app will use built-in sample data
-
-### Compilation Issues
-- Make sure Java 11+ is installed
-- Check that all source files are in the correct locations
-- Verify all dependencies are available
-
-### Runtime Issues
-- Check console for error messages
-- Ensure all FXML files are in the correct location
-- Verify CSS file path
-- Use the provided `run.bat` script for easy execution
-
-## Future Enhancements
-
-- Movie detail pages
-- User ratings and reviews
-- Watchlist functionality
-- Advanced search filters
-- Movie trailers integration
-- User authentication
-
-## Dependencies
-
-- Java 11+
-- JavaFX
-- TMDB API (external)
-
-## License
-
-This project is for educational purposes. Please respect TMDB's API terms of service. 
+- **JavaFX**  
+- **TMDB REST API**  
+- **Java HTTP Client / Networking**  
+- **JSON Parsing (Gson / Jackson)**  
+- **JavaFX CSS for UI styling**
